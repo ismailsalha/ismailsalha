@@ -158,7 +158,7 @@ def hero() -> Doc:
             fx, fy = colx[i % 2], y + (i // 2) * 30
             warm = i == len(C.FOCUS) - 1
             d.dot(fx + 3, fy - 4, 3, T.AMBER if warm else T.CYAN)
-            lines = item.upper().split(' ', 1) if measure(item.upper(), MONO, 11.5, 0.12) > 200 else [item.upper()]
+            lines = item.upper().split(' ', 1) if measure(item.upper(), MONO, 11.5, 0.12) > 180 else [item.upper()]
             for k, ln in enumerate(lines):
                 d.mono(ln, fx + 15, fy + k * 16, 11.5, T.BODY, 0.12)
     y += 74
