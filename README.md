@@ -23,8 +23,6 @@
 
 <a href="https://ismailsalha.vercel.app/#experience"><img src="assets/experience.svg" width="100%" alt="Experience: Core Team Member, GDGoC Al-Aqsa; IEEE Student Member, IEEE Palestine Subsection"></a>
 
-<a href="https://github.com/ismailsalha?tab=repositories"><img src="assets/github.svg" width="100%" alt="GitHub activity"></a>
-
 <a href="mailto:ismailsalha21@gmail.com"><img src="assets/contact.svg" width="100%" alt="Let's build something intelligent. I'm open to internships, freelance work and collaborations in machine learning, data and web development. Email me and I'll get back to you."></a>
 
 <a href="mailto:ismailsalha21@gmail.com"><img src="assets/channel-email.svg" width="49%" alt="Email: ismailsalha21@gmail.com"></a> <a href="https://www.linkedin.com/in/ismail-salha-b571633b6"><img src="assets/channel-linkedin.svg" width="49%" alt="LinkedIn: in/ismail-salha-b571633b6"></a>

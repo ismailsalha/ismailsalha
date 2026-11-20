@@ -31,11 +31,6 @@ def targets():
     for icon, label, value, _ in C.CHANNELS:
         yield f"channel-{label.lower()}", (lambda i=icon, l=label, v=value: panels.channel(i, l, v))
     yield "footer", panels.footer
-    try:
-        import github_stats
-        yield "github", github_stats.panel
-    except ImportError:
-        pass
 
 
 def img(src, alt, width="100%", height=None):
@@ -63,7 +58,6 @@ def readme() -> str:
         rows.append(" ".join(link(f"https://github.com/{C.LOGIN}/{p['repo']}", img(f"repo-{p['num']}", f"{p['title']}: {p['text']}", "49%")) for p in pair))
     rows += [
         link(pf + "/#experience", img("experience", "Experience: " + "; ".join(f"{e['title']}, {e['org']}" for e in C.EXPERIENCE))),
-        link(f"https://github.com/{C.LOGIN}?tab=repositories", img("github", "GitHub activity")),
         link("mailto:" + C.EMAIL, img("contact", "Let's build something intelligent. " + C.CONTACT_TEXT)),
     ]
     ch = [link(href, img(f"channel-{label.lower()}", f"{label}: {value}", "49%")) for _, label, value, href in C.CHANNELS]

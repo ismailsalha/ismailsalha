@@ -158,7 +158,7 @@ def hero() -> Doc:
             fx, fy = colx[i % 2], y + (i // 2) * 30
             warm = i == len(C.FOCUS) - 1
             d.dot(fx + 3, fy - 4, 3, T.AMBER if warm else T.CYAN)
-            lines = wrap(item.upper(), MONO, 11.5, 190) if measure(item.upper(), MONO, 11.5, 0.12) > 200 else [item.upper()]
+            lines = item.upper().split(' ', 1) if measure(item.upper(), MONO, 11.5, 0.12) > 200 else [item.upper()]
             for k, ln in enumerate(lines):
                 d.mono(ln, fx + 15, fy + k * 16, 11.5, T.BODY, 0.12)
     y += 74
@@ -632,7 +632,7 @@ def contact() -> Doc:
     d = Doc(W, H, "Let's build something intelligent.", C.CONTACT_TEXT, radius=26)
     d.glow(W * 0.85, H, 420, 260, T.CYAN, 0.16)
     d.glow(W * 0.98, H, 200, 140, T.AMBER, 0.08)
-    d.label(P, 56, "05", "Contact", 420)
+    d.label(P, 56, "04", "Contact", 420)
     d.badge(W - P, 36, "Open to opportunities", live=True, anchor="end")
     d.text("Let’s build", P, 128, DISPLAY, 46, T.FG, -0.05)
     d.text("something", P, 178, DISPLAY, 46, T.FG, -0.05)
